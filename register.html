@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <p>Please fill in your details</p>
+
+    <form method="post" action="success.html"
+          onsubmit="event.preventDefault(); window.location.href='success.html';">
+
+        <label>Full Name</label>
+        <input type="text" name="username"
+               placeholder="Enter your full name"
+               minlength="3" maxlength="40" required>
+
+        <label>Email Address</label>
+        <input type="email" name="email"
+               placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone"
+               placeholder="03XXXXXXXXX"
+               minlength="11" maxlength="11"
+               pattern="[0-9]{11}" required>
+
+        <label>Password</label>
+        <input type="password" name="password"
+               placeholder="Create a password"
+               minlength="6" maxlength="20" required>
+
+        <label>Date of Birth</label>
+        <input type="date" name="dob" required>
+
+        <label>Gender</label>
+        <div class="options">
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+        </div>
+
+        <label>Education</label>
+        <select name="education" required>
+            <option value="">Select Education</option>
+            <option value="Matric">Matric</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Bachelor">Bachelor</option>
+            <option value="Master">Master</option>
+        </select>
+
+        <label>Address</label>
+        <textarea name="address" rows="3"
+                  placeholder="Enter your address"
+                  maxlength="150" required></textarea>
+
+        <div class="options">
+            <input type="checkbox" name="terms" required>
+            I agree to the terms and conditions
+        </div>
+
+        <button type="submit">Submit Registration</button>
+
+        <p><a href="login.html">Back to Login</a></p>
+    </form>
+</div>
+
+</body>
+</html>

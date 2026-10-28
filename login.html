@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Welcome Back!</h2>
+    <p>Login to continue</p>
+
+    <form method="post" action="register.html"
+          onsubmit="event.preventDefault(); window.location.href='register.html';">
+
+        <label>Email Address</label>
+        <input type="email" name="email"
+               placeholder="Enter your email" required>
+
+        <label>Password</label>
+        <input type="password" name="password"
+               placeholder="Enter your password"
+               minlength="4" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p>Not registered?
+        <a href="register.html">Sign Up</a>
+    </p>
+</div>
+
+</body>
+</html>
